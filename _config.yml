@@ -1,11 +1,11 @@
 # Site settings
-title: Fake Data
+title: DataIpsum
 email: your-email@domain.com
 description: "Fake it 'til they make the API"
-baseurl: "/fakedata/"
+baseurl: ""
 url: "http://ineedyourbrain.github.io/fakedata/"
-twitter_username: jekyllrb
-github_username:  jekyll
+twitter_username: 
+github_username:  
 
 # Build settings
 markdown: kramdown
