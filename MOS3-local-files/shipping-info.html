@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>		<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:htmldb="http://htmldb.oracle.com" xmlns:apex="http://apex.oracle.com" class="base lt-ie9 lt-ie8 lt-ie7 ie6"> <![endif]-->
+<!--[if IE 7]>			<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:htmldb="http://htmldb.oracle.com" xmlns:apex="http://apex.oracle.com" class="base lt-ie9 lt-ie8 ie7"> <![endif]-->
+<!--[if IE 8]>			<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:htmldb="http://htmldb.oracle.com" xmlns:apex="http://apex.oracle.com" class="base lt-ie9 ie8"> <![endif]-->
+<!--[if IE 9 ]>			<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:htmldb="http://htmldb.oracle.com" xmlns:apex="http://apex.oracle.com" class="base ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:htmldb="http://htmldb.oracle.com" xmlns:apex="http://apex.oracle.com" class="base"> <!--<![endif]-->
+
+<head runat="server">
+	<title>MOS3</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<!-- APEX things -->
+	<link rel="stylesheet" href="mos_css/v3/apex_4_1.min.css" type="text/css" />
+	<!--[if IE]><link rel="stylesheet" href="mos_css/v3/apex_ie_4_1.css" type="text/css" /><![endif]-->
+	<link rel="stylesheet" href="mos_css/v3/apex-jquery-ui.min.css" type="text/css" />
+	<link rel="stylesheet" href="mos_css/v3/apex-theme_4_0.css" type="text/css" />
+	<!--[if IE]><link rel="stylesheet" href="/i/themes/theme_21/css/theme_4_0_ie.css" type="text/css" /><![endif]-->
+	<!--[if IE 6]><link rel="stylesheet" href="/i/themes/theme_21/css/theme_4_0_ie6.css" type="text/css" /><![endif]-->
+	<!--[if IE 7]><link rel="stylesheet" href="/i/themes/theme_21/css/theme_4_0_ie7.css" type="text/css" /><![endif]-->
+	<link rel="stylesheet" href="mos_css/v3/footer_layout2.css" type="text/css" />
+	<script src="mos_js/v3/apex_4_1.min.js" type="text/javascript"></script>
+	
+	<!-- Site specific includes -->
+	<!--[if IE 9]><!-->
+	<link href="mos_css/v3/bootstrap.min.css" rel="stylesheet" type="text/css">
+	<link href="mos_js/v3/html5shiv.min.js" rel="stylesheet" type="text/css">
+	<!--<![endif]-->
+	<link rel="stylesheet" href="mos_css/v3/megamenu.css" type="text/css" />
+	<link href="mos_css/v3/jquery.bxslider.css" rel="stylesheet" type="text/css">	
+	<link href="mos_css/v3/mos3-stylesheet.css" rel="stylesheet" type="text/css">
+
+	<link href="mos_css/v3/mos3-footer-stylesheet.css" rel="stylesheet" type="text/css">
+	
+	<script src="mos_js/v3/jquery-1.11.2.min.js"></script>
+	<script src="mos_js/v3/bootstrap.min.js"></script>
+	<script src="mos_js/v3/jquery-accessibleMegaMenu.js"></script>
+	<script src="mos_js/v3/jquery.bxslider.js"></script>
+	
+	<script src="mos_js/v3/main.js"></script>	
+	<link href="mos_css/v3/font-awesome.css" rel="stylesheet" type="text/css">
+	
+	<!--[if lt IE 9]>
+	  <link href="mos_css/v3/ie.css" rel="stylesheet" type="text/css">
+	<![endif]-->
+	
+	<!--[if lt IE 7]>
+	
+	<![endif]-->
+
+	<style type="text/css">
+		.sample-block {
+			height: 60px;
+			background: grey;
+		}
+	</style>
+	
+</head>
+<body>
+<div class="page-header clearfix">
+</div>
+<!-- END .page-header -->
+
+<div class="page-body clearfix">
+	<div class="container">
+		<div class="row main-nav clearfix">
+			<p><em>Main Navigation</em></p>
+		</div>
+	</div>
+	
+	
+	<div class="container container-bg">
+	
+		<h1>Shipping Information</h1>
+		<!-- CHECKOUT -->
+		
+		<div class="row navi-row clearfix">
+			<div class="col-md-10">
+				<a href="/products">&laquo;&nbsp;Continue Shopping</a>
+				<a class="pull-right" onclick="javascript:cancelOrder();"><i class="fa fa-times-circle"></i>&nbsp;Cancel Order</a>
+			</div>
+		</div>
+		<!-- END .row -->
+		
+		<div class="row clearfix">
+			<div class="col-md-10">
+				<p>Please provide your shipping information.</p>		
+			</div>	
+		</div>
+		<!-- END .row -->
+		
+		<div class="row section-row clearfix">
+			<div class="col-md-10">
+				<div class="title-banner">
+					<h2 class="no-margins">Shipping Contact</h2>
+				</div>
+			</div>
+		</div>
+		
+		
+		
+		<div class="row section-row clearfix">
+			<div class="col-md-10">
+				<div class="sub-header-link action-link-sm clearfix mobile-left">
+					<a class="pull-right lnkClearInfo clearShippingContact">Clear Shipping Contact</a>
+				</div>
+				<div class="row form-row clearfix">
+					<div class="col-xs-4 col-xxs-10 control-label">
+						<label for="P24_COMPANY_BASE" tabindex="999"><span class="optional">Company or Military Base:</span></label>
+					</div>
+					<div class="col-xs-6 col-xxs-10 control-input">
+						<input type="hidden" name="p_arg_names" value="103113857332441396">
+						<input type="text" id="P24_COMPANY_BASE" name="p_t32" value="" size="30" maxlength="100" class="text_field">
+					</div>
+				</div>
+				<!-- END .form-row -->
+				
+				<div class="row form-row clearfix">
+					<div class="col-xs-4 col-xxs-10 control-label">
+						<label for="P24_FIRST_NAME" tabindex="999">			
+						<span class="required">First Name:</span> <img src="mos_images/v3/requiredicon_status2.gif" alt="Value Required" tabindex="999"> </label>
+					</div>
+					<div class="col-xs-6 col-xxs-10 control-input">
+						<input type="hidden" name="p_arg_names" value="104647148479622009">
+						<input type="text" id="P24_FIRST_NAME" name="p_t33" value="Jennifer" size="30" maxlength="50" class="text_field">
+					</div>
+				</div>
+				<!-- END .form-row -->
+				
+				<div class="row form-row clearfix">
+					<div class="col-xs-4 col-xxs-10 control-label">
+						<label for="P24_LAST_NAME" tabindex="999">
+						<span class="required">Last Name:</span> <img src="mos_images/v3/requiredicon_status2.gif" alt="Value Required" tabindex="999"> 
+								</label>
+					</div>
+					<div class="col-xs-6 col-xxs-10 control-input">
+						<input type="hidden" name="p_arg_names" value="104647364755626789">
+						<input type="text" id="P24_LAST_NAME" name="p_t34" value="Roth" size="30" maxlength="50" class="text_field">
+					</div>
+				</div>
+				<!-- END .form-row -->
+				
+				<div class="row form-row clearfix">
+					<div class="col-xs-4 col-xxs-10 control-label">
+						<label for="P24_EMAIL_ADDRESS" tabindex="999"><span class="required">Email:</span><img src="mos_images/v3/requiredicon_status2.gif" alt="Value Required" tabindex="999">  </label>
+					</div>
+					<div class="col-xs-6 col-xxs-10 control-input">
+						<input type="hidden" name="p_arg_names" value="104649652419982741">
+						<input type="text" id="P24_EMAIL_ADDRESS" name="p_t35" value="jroth@threewiresys.com" size="30" maxlength="100" class="text_field">
+					</div>
+				</div>
+				<!-- END .form-row -->
+				
+				<div class="row form-row clearfix">
+					<div class="col-xs-4 col-xxs-10 control-label">
+						<label for="P24_WORK_PHONE" tabindex="999"><span class="required">Phone:</span><img src="mos_images/v3/requiredicon_status2.gif" alt="Value Required" tabindex="999">  </label>
+					</div>
+					<div class="col-xs-6 col-xxs-10 control-input">
+						<input type="hidden" name="p_arg_names" value="104649846663990498">
+						<input type="text" id="P24_WORK_PHONE" name="p_t36" value="234-234-2344" size="25" maxlength="25" class="text_field">
+					</div>
+				</div>
+				<!-- END .form-row -->
+				
+			</div>
+		</div>
+		
+		
+		
+		
+		
+		<div class="row section-row clearfix">
+			<div class="col-md-10">
+				<div class="title-banner">
+					<h2 class="no-margins">Shipping Address</h2>
+				</div>
+			</div>
+		</div>
+		
+		
+		
+		<div class="row section-row clearfix">
+			<div class="col-md-10">
+				<div class="sub-header-link action-link-sm clearfix mobile-left">
+					<a class="pull-right lnkClearInfo clearShippingContact">Clear Shipping Address</a>
+				</div>
+				<div class="row form-row clearfix">
+					<div class="col-xs-4 col-xxs-10 control-label">
+						<label for="P24_COMPANY_BASE" tabindex="999"><span class="optional">Country:</span></label>
+					</div>
+					<div class="col-xs-6 col-xxs-10 control-input">
+						<input type="hidden" name="p_arg_names" value="103113857332441396">
+						<input type="text" id="P24_COMPANY_BASE" name="p_t32" value="" size="30" maxlength="100" class="text_field">
+					</div>
+				</div>
+				<!-- END .form-row -->
+				
+				<div class="row form-row clearfix">
+					<div class="col-xs-4 col-xxs-10 control-label">
+						<label for="P24_FIRST_NAME" tabindex="999">			
+						<span class="required">Address Line 1:</span> <img src="mos_images/v3/requiredicon_status2.gif" alt="Value Required" tabindex="999"> </label>
+					</div>
+					<div class="col-xs-6 col-xxs-10 control-input">
+						<input type="hidden" name="p_arg_names" value="104647148479622009">
+						<input type="text" id="P24_FIRST_NAME" name="p_t33" value="Jennifer" size="30" maxlength="50" class="text_field">
+					</div>
+				</div>
+				<!-- END .form-row -->
+				
+				<div class="row form-row clearfix">
+					<div class="col-xs-4 col-xxs-10 control-label">
+						<label for="P24_LAST_NAME" tabindex="999">
+						<span class="required">Address Line 2:</span> <img src="mos_images/v3/requiredicon_status2.gif" alt="Value Required" tabindex="999"> 
+								</label>
+					</div>
+					<div class="col-xs-6 col-xxs-10 control-input">
+						<input type="hidden" name="p_arg_names" value="104647364755626789">
+						<input type="text" id="P24_LAST_NAME" name="p_t34" value="Roth" size="30" maxlength="50" class="text_field">
+					</div>
+				</div>
+				<!-- END .form-row -->
+				
+				<div class="row form-row clearfix">
+					<div class="col-xs-4 col-xxs-10 control-label">
+						<label for="P24_EMAIL_ADDRESS" tabindex="999"><span class="required">City:</span><img src="mos_images/v3/requiredicon_status2.gif" alt="Value Required" tabindex="999">  </label>
+					</div>
+					<div class="col-xs-6 col-xxs-10 control-input">
+						<input type="hidden" name="p_arg_names" value="104649652419982741">
+						<input type="text" id="P24_EMAIL_ADDRESS" name="p_t35" value="jroth@threewiresys.com" size="30" maxlength="100" class="text_field">
+					</div>
+				</div>
+				<!-- END .form-row -->
+				
+				<div class="row form-row clearfix">
+					<div class="col-xs-4 col-xxs-10 control-label">
+						<label for="P24_WORK_PHONE" tabindex="999"><span class="required">Province:</span><img src="mos_images/v3/requiredicon_status2.gif" alt="Value Required" tabindex="999">  </label>
+					</div>
+					<div class="col-xs-6 col-xxs-10 control-input">
+						<input type="hidden" name="p_arg_names" value="104649846663990498">
+						<input type="text" id="P24_WORK_PHONE" name="p_t36" value="234-234-2344" size="25" maxlength="25" class="text_field">
+					</div>
+				</div>
+				<!-- END .form-row -->
+				
+				<div class="row form-row clearfix">
+					<div class="col-xs-4 col-xxs-10 control-label">
+						<label for="P24_WORK_PHONE" tabindex="999"><span class="required">Postal Code:</span><img src="mos_images/v3/requiredicon_status2.gif" alt="Value Required" tabindex="999">  </label>
+					</div>
+					<div class="col-xs-6 col-xxs-10 control-input">
+						<input type="hidden" name="p_arg_names" value="104649846663990498">
+						<input type="text" id="P24_WORK_PHONE" name="p_t36" value="234-234-2344" size="25" maxlength="25" class="text_field">
+					</div>
+				</div>
+				<!-- END .form-row -->
+				
+			</div>
+		</div>
+		
+		
+		
+		<div class="row section-row clearfix">
+			<div class="col-md-10">
+				<hr class="accent-border-top section-row" />
+				<div class="button-row action-link mobile-center">
+					<a class="btn-primary right mobile-no-float">PLACE ORDER</a>
+				</div>
+			</div>
+		
+		</div>
+		
+	</div>
+	<!-- END .container -->
+</div>
+<!-- END .page-body -->
+
+<div class="page-band-inverted clearfix">
+	<div class="container container-wide">
+		<div class="row">
+			<div class="col-md-6">
+				<div class="sample-block"></div>
+			</div>
+			<!-- END .col-md-6 -->
+			<div class="col-md-6">
+				<div class="sample-block"></div>
+			</div>
+			<!-- END .col-md-6 -->
+		</div>
+		<!-- END .row -->
+	</div>
+	<!-- END .container -->
+</div>
+<!-- END .page-band-inverted -->
+
+<div class="page-band clearfix">
+	<div class="container container-wide">
+		<div class="row">
+			<div class="col-md-5 col-sm-12">
+				<div class="sample-block"></div>
+			</div>
+			<!-- END .col-md-5 -->
+			<div class="col-md-3 col-xs-6 col-xxs-10 control-input col-xs-12">
+				<div class="sample-block"></div>
+			</div>
+			<!-- END .col-md-3 -->
+			<div class="col-md-4 col-xs-6 col-xxs-10 control-input col-xs-12">
+				<div class="sample-block"></div>
+			</div>
+			<!-- END .col-md-4 -->
+		</div>
+		<!-- END .row -->
+	</div>
+	<!-- END .container -->
+</div>
+<!-- END .page-band -->
+
+<div class="page-footer clearfix">
+	<div class="container container-wide">
+		<div class="row">
+			<div class="col-md-3 col-xs-6 col-xxs-10 control-input">
+				<div class="sample-block"></div>
+			</div>
+			<!-- END .col-md-3 -->
+			<div class="col-md-3 col-xs-6 col-xxs-10 control-input">
+				<div class="sample-block"></div>
+			</div>
+			<!-- END .col-md-3 -->
+			<div class="col-md-3 col-xs-6 col-xxs-10 control-input">
+				<div class="sample-block"></div>
+			</div>
+			<!-- END .col-md-3 -->
+			<div class="col-md-3 col-xs-6 col-xxs-10 control-input">
+				<div class="sample-block"></div>
+			</div>
+			<!-- END .col-md-3 -->
+		</div>
+		<!-- END .row -->
+	</div>
+	<!-- END .container -->
+</div>
+<!-- END .page-footer -->
+
+</body>
+</html>

@@ -1,0 +1,328 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+
+body {
+	background: #fff;
+	font-family: "Open Sans", Arial, sans-serif;
+	font-size:62.5%;
+}
+p, ol, ul {
+	font-size: 1.4em;
+	line-height: 1.5em;
+}
+p {
+	margin: 10px 0;
+}
+ol {
+	list-style: decimal;
+}
+ul {
+	list-style: none;
+}
+ul li {
+	background: url('../images/bullet.png') no-repeat 0 6px;
+	padding-left: 12px;
+}
+ol li, 
+ul li {
+	list-style-position: inside;
+}
+a, a:hover {
+	color: #0072bc;
+}
+strong {
+	font-weight: bold;
+}
+
+.content-wrapper {
+	margin: 0 0 ;
+}
+.row {
+	margin-bottom: 40px;
+}
+h1 {
+	font-size: 3em;
+	line-height: 1.5em;
+	font-weight: bold;
+	color: #b52026;
+}
+h1.home-title {
+	font-size: 2em;
+	line-height: 1.2em;
+}
+h2 {
+	font-size: 1.8em;
+	line-height: 1.4em;
+	font-weight: bold;
+	color: #b52026;
+}
+.slider {
+	padding: 20px 15px;
+	background: #093858;
+}
+.slider h2 {
+	color: #f5c670;
+}
+.cta-banner {
+	padding: 20px 20px 10px 20px;
+	background: #fdf4e2;
+	border-bottom: 5px solid #f5c670;
+	border-radius: 10px 10px 0 0;
+}
+.cta-banner h2 {
+	font-size: 2em;
+	line-height: 1.8em;
+	color: #006699;
+}
+.cta-banner p {
+	font-size: 1.6em;
+}
+.cta-banner.inverse {
+	background: #000;
+	border-left: 1px solid #c7c8ca;
+	border-top: 1px solid #c7c8ca;
+	border-right: 1px solid #c7c8ca;
+}
+.cta-banner.inverse h2 {
+	font-size: 2em;
+	color: #fec45b;
+}
+.cta-banner.inverse p {
+	color: #fff;
+}
+
+.article-abstract h2,
+.topic-abstract h2 {
+	margin-bottom: 5px;
+	font-size: 1.6em;
+	line-height: 1.2em;
+	font-weight: normal;
+	color: #b52026;
+}
+
+.article-abstract p,
+.topic-abstract p {
+	font-size: 1.4em;
+	line-height: 1.4em;
+	color: #000;
+}
+.img-container {
+	width: 150px;
+	height: 150px;
+	border: 1px solid #d1d1d1;
+	border-bottom: 3px solid #f5c670;
+	border-radius: 10px 10px 0 0;
+}
+.cta-highlight {
+	padding: 20px 24px;
+	background: #fef9f0;
+	border-top: 2px dotted #fec45b;
+	border-bottom: 2px dotted #fec45b;
+}
+.btn-primary {
+	min-width: 150px;
+	height: 30px;
+	font-size: 1.4em;
+	padding: 5px 10px;
+	border-radius: 5px;
+	background: #006699;
+	color: #fff;
+	border: none;
+}
+.btn-primary:hover, 
+.btn-primary.hover {
+	background: #0072bc;
+}
+.color-tile {
+	height: 50px;
+}
+.color-tile.primary1 {
+	background-color: #083858;
+}
+.color-tile.primary2 {
+	background-color: #B51E25;
+}
+.color-tile.accent1 {
+	background-color: #006699;
+}
+.color-tile.accent2 {
+	background-color: #F6BE53;
+}
+.color-tile.bg-highlight {
+	background-color: #fef9f0;
+}
+.footer h3 {
+	font-size: 1.4em;
+	color: #231f20;
+}
+label {
+	display: block;
+	font-size: 12px;
+	margin-left: 10px;
+	margin-bottom: 10px;
+}
+input[type="text"] {
+	float: left;
+	height: 30px;
+	min-width: 300px;
+	background: #ebebeb;
+	border: 1px solid #d7d7d7;
+	border-radius: 5px 0 0 5px;	
+}
+input[type="button"].go {
+	float: left;
+	width: 35px;
+	height: 30px;
+	background: #bd1b21;
+	border: none;
+	border-radius: 0 5px 5px 0;
+}
+
+
+
+
+/* STYLEGUIDE STYLES */
+h1.title {
+	padding: 40px 20px;
+	border-bottom: 0;
+	font-size: 4em;
+	color: #fff;
+}
+.body-bg {
+	background: url('../images/body-bg.png') repeat-x;
+}
+.styleguide-h1 { 
+	background: #e1e1e1; 
+	border-bottom: 1px solid grey; 
+	font-family: gothamlight, verdana, sans-serif; 
+	color: #999; 
+	font-size: 2em;
+	font-weight: normal; 
+	padding: 10px 20px; 
+}
+.styleguide-h2 { 
+	border-bottom: 1px solid grey; 
+	font-family: gothamlight, verdana, sans-serif; 
+	text-transform: uppercase; 
+	color: #999; 
+	font-size: 1.5em;
+	font-weight: normal; 
+	padding: 3px 20px; 
+	margin-bottom: 20px;
+}
+.styleguide-h2 span {
+	text-transform: none;
+}
+.styleguide-body { 
+	margin-bottom: 20px; 
+	padding: 20px;
+}
+.styleguide-description p {
+	margin-top: 0;
+	border-left: 5px solid #e1e1e1;
+	padding-left: 10px;
+	margin-left: 30px;
+}
+.styleguide-highlight {
+	position: relative;
+}
+.styleguide-highlight pre {
+	margin: 10px 0;
+	padding: 20px;
+	box-sizing: border-box;
+	font-size: 1.4em;
+}
+.styleguide-description .styleguide-highlight pre {
+	margin: 10px 30px;
+}
+.copy-markup {
+	position: absolute;
+	top: 5px;
+	right: 35px;
+	padding: 3px 10px;
+	background: #fff;
+	border: 1px solid #ccc;
+	border-radius: 10px;
+}
+@media (max-width: 1200px) {
+	.mobile-view .navbar-header {
+		float: none;
+	}
+	.navbar-left,.navbar-right {
+	    float: none !important;
+	}
+	.navbar-toggle {
+	    display: block;
+	}
+	.navbar-collapse {
+	    border-top: 1px solid transparent;
+	    box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+	}
+	.navbar-fixed-top {
+		top: 0;
+		border-width: 0 0 1px;
+	}
+	.navbar-collapse.collapse {
+	    display: none!important;
+	}
+	.navbar-nav {
+	    float: none!important;
+		margin-top: 7.5px;
+	}
+	.navbar-nav>li {
+	    float: none;
+	}
+	.navbar-nav>li>a {
+	    padding-top: 10px;
+	    padding-bottom: 10px;
+	}
+	.collapse.in{
+			display:block !important;
+	}
+
+	.mobile-view .nav-row ul li {
+		margin-right: 0;
+	}
+	
+	.mobile-view .nav-row ul {
+	float: none;
+	margin: 0;
+	background: #145b91;
+	}
+	
+	.mobile-view .nav-row ul li,
+	.mobile-view .nav-row ul li.active {
+	display: block;
+	margin-bottom: 0;
+	padding-bottom: 0;
+	border-top: 1px solid #154d7e;
+	}
+	
+	.mobile-view .navbar-inverse .navbar-nav > .active > a {
+	color: #faaf40;
+	}
+	
+	.mobile-view .nav-row ul li a {
+	border: none;
+	padding: 10px;
+	}
+	
+	.mobile-view .navbar-inverse .navbar-nav > li > a:hover,
+	.mobile-view .navbar-inverse .navbar-nav > li.active > a:hover,
+	.mobile-view .navbar-inverse .navbar-nav > .active > a:hover {
+	text-decoration: none;
+	background: #328ede;
+	}
+	
+	.mobile-view .nav-row ul li.active {
+	border-bottom: inherit;
+	}
+	
+	.mobile-view .nav-row li a {
+	font-size: 90%;
+	}
+}

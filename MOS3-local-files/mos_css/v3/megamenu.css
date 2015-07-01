@@ -1,0 +1,335 @@
+/*
+Copyright © 2013 Adobe Systems Incorporated.
+
+Licensed under the Apache License, Version 2.0 (the “License”);
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an “AS IS” BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+*/
+
+
+.megamenu > ol > li,
+.accessible-megamenu-panel-group {display: none; }
+  
+
+.accessible-megamenu {
+    position: relative;
+    display:block;
+    box-sizing: border-box;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    z-index: 999;
+}
+
+.accessible-megamenu h2,
+.accessible-megamenu h3,
+.accessible-megamenu h4 {
+    display: inline;
+    margin: 0;
+    padding: 0;
+    line-height: inherit;
+}
+.accessible-megamenu h2 {
+	font-size: 1.2em;
+	font-weight: normal;
+}
+.accessible-megamenu p, 
+.accessible-megamenu ol, 
+.accessible-megamenu ul {
+  font-size: .95em;
+  line-height: 1.5em;
+}
+.accessible-megamenu .accessible-megamenu-top-nav-item {
+    position: relative;
+    display: block;
+    height: 80px;
+    box-sizing: border-box;
+    list-style: none;
+    margin: 0;
+    padding: 15px 0;
+    float: left;
+    text-align: center;
+}
+.accessible-megamenu .accessible-megamenu-top-nav-item ol {
+	text-align: left;
+}
+
+.menu-toggle a:focus {
+    outline:  2px solid rgba(34, 95, 215, 0.3);
+    -moz-outline-radius: 3px;
+    text-shadow: 1px 3px 3px #000;
+}
+.accessible-megamenu.open:focus {
+	
+}
+.accessible-megamenu .accessible-megamenu-top-nav-item a[aria-haspopup] {
+    position: relative;
+    display: block;
+    width: 136px;
+    line-height: 1.4em;
+    height: 3em;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: #fff;
+    text-decoration: none;
+    z-index: inherit;
+}
+
+.accessible-megamenu .accessible-megamenu-top-nav-item a[aria-haspopup]:hover, 
+.accessible-megamenu .accessible-megamenu-top-nav-item a[aria-haspopup]:focus {
+
+}
+
+.accessible-megamenu .accessible-megamenu-top-nav-item a[aria-haspopup]:hover, 
+.accessible-megamenu .accessible-megamenu-top-nav-item a[aria-haspopup]:focus,
+.accessible-megamenu .accessible-megamenu-top-nav-item a[aria-haspopup].open {
+    margin-left: 0;
+    z-index: 1002;
+}
+
+.accessible-megamenu .accessible-megamenu-top-nav-item a[aria-haspopup].open {
+    background: none;
+}
+
+.accessible-megamenu .accessible-megamenu-top-nav-item:first-child a[aria-haspopup] {
+}
+
+.accessible-megamenu .accessible-megamenu-top-nav-item:first-child a[aria-haspopup].open {
+}
+
+.accessible-megamenu .accessible-megamenu-panel {
+    position: absolute;
+    display: block;
+    color: #454545;
+    background: #fff;
+    margin: 0;
+    padding: 0 0 10px 10px ;
+    line-height: normal;
+    cursor: default;
+		-webkit-box-shadow: 0 4px 6px -2px rgba(0,0,0,.5);
+		-moz-box-shadow: 0 4px 6px -2px -moz-rgba(0,0,0,.5);
+		box-shadow: 0 4px 6px -2px rgba(0,0,0,.5);
+    visibility: hidden;
+    top: -9999em;
+    max-height: 0px;
+    overflow: hidden;
+    opacity: 0;
+    border-bottom: 5px solid #B51E25;
+}
+
+.accessible-megamenu .accessible-megamenu-panel.open {
+    visibility: visible;
+    top: 80px;
+    max-height: 1000px;
+    opacity: 1;
+    z-index: 1001;
+}
+
+.accessible-megamenu .accessible-megamenu-panel a {
+    display: inline-block;
+    text-decoration: none;
+}
+.accessible-megamenu-top-nav-item a.focus {
+	outline: none;
+}
+.accessible-megamenu .accessible-megamenu-panel.cols-3 {
+    width: 980px;
+    padding-top: 40px;
+    background: url(/mos_images/v3/menu-bg.png) repeat-y #fff;
+}
+.accessible-megamenu .accessible-megamenu-panel.cols-3 .side-col {
+	width: 216px;
+}	
+.accessible-megamenu .accessible-megamenu-panel.cols-3 .center-col{
+	width: 488px;
+}
+.accessible-megamenu .accessible-megamenu-panel.cols-3 > ol > li {
+    width: 30%;
+}
+.accessible-megamenu .accessible-megamenu-panel.cols-2 {
+	width: 612px;
+	padding-top: 20px;
+	background: url(/mos_images/v3/menu-bg-2col.png) repeat-y right #fff;
+}
+.accessible-megamenu .accessible-megamenu-panel.cols-2 > ol > li {
+	width: 386px;
+}
+.accessible-megamenu .accessible-megamenu-panel.cols-2 .side-col {
+	width: 200px;
+	margin-right: 0;
+	padding-left: 0;
+}
+.accessible-megamenu .accessible-megamenu-panel.cols-2 .title {
+	margin-left: 30px;
+	margin-bottom: 200px;
+	font-size: 1.3em;
+	font-weight: bold;
+}
+.accessible-megamenu .accessible-megamenu-panel.cols-2 .img-wrapper {
+	position: absolute; 
+	bottom: 0; 
+	right: 0; 
+	width: 200px; 
+	height: 200px; 
+	background: grey;
+}
+.accessible-megamenu .accessible-megamenu-panel.cols-1 {
+    width: 615px;
+}
+
+.accessible-megamenu .accessible-megamenu-panel.cols-1 > ol > li {
+    width: auto;
+}
+
+.accessible-megamenu .accessible-megamenu-panel ol {
+    display: block;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.accessible-megamenu .accessible-megamenu-panel ol > li {
+    list-style: none;
+    margin: 0 0 8px;
+    padding: 0;
+}
+
+.accessible-megamenu .accessible-megamenu-panel > ol > li {
+    float: left;
+    display: block;
+    margin-right: 1em;
+    margin-bottom: 1em;
+    padding-left: 1em;
+}
+
+.accessible-megamenu .accessible-megamenu-panel > ol > li:first-of-type {
+    padding-left: 0;
+    border-left: none;
+    box-shadow: none;
+}
+
+.accessible-megamenu .accessible-megamenu-panel > p {
+	font-size: 1em;
+    color: #454545;
+}
+
+.accessible-megamenu .accessible-megamenu-panel > ol > li > h3 > a {
+    font-weight: bold;
+    color: #454545;
+    margin-bottom: 6px;
+    padding-top: .4em;
+    padding-bottom: 0;
+}
+
+.accessible-megamenu .accessible-megamenu-panel ol ol > li > a {
+    width: auto;
+}
+
+.accessible-megamenu .accessible-megamenu-panel a:hover,
+.accessible-megamenu .accessible-megamenu-panel a:focus {
+    text-decoration: underline;   
+}
+
+.accessible-megamenu .accessible-megamenu-panel > ol > li > h3 > a:hover,
+.accessible-megamenu .accessible-megamenu-panel > ol > li > h3 > a:focus {
+    color: #333;
+}
+
+.accessible-megamenu .accessible-megamenu-panel hr {
+    border-width: 1px 0px;
+    border-style: solid;
+    border-top-color: rgba(0,0,0, 0.3);
+    border-bottom-color: #fff;
+}
+.accessible-megamenu .dropdown-header a {
+	font-weight: bold;
+	color: #B51E25;
+	white-space: normal;
+}
+.accessible-megamenu .accessible-megamenu-panel ol.col-3 {
+	width: 31%;
+	float: left;
+	margin-right: 2%;
+}
+.accessible-megamenu .accessible-megamenu-panel.cols-2 ol.col-2 {
+	width: 46%;
+	float: left;
+	margin-right: 4%;
+	font-size: 1.1em;
+	line-height: 1.3em;
+	font-weight: bold;
+}
+.accessible-megamenu-panel .cta-phone.accent-1 {
+	margin-bottom: 20px;
+	font-size: 1.3em;
+	color: #B51E25;
+	font-weight: bold;
+}
+.accessible-megamenu-panel .cta-phone.accent-2 {
+	margin: 0;
+	font-size: 1.5em;
+	color: #000;
+	font-weight: bold;
+}
+.accessible-megamenu-panel .title-1,
+.accessible-megamenu-panel .title-2 {
+	margin-bottom: 0;
+	font-size: 1.05em;
+	color: #B51E25;
+	font-weight: bold;
+}
+.accessible-megamenu-panel .title-1 {
+	margin-top: 0;
+	margin-bottom: 10px;
+	font-size: 1.2em;
+}
+.accessible-megamenu-panel-group > ol > li:first-child > p {
+	margin-top: 0;
+}
+.accessible-megamenu-panel-group.side-col button {
+	margin: 10px 0 20px;
+}
+.nav-pointer {
+	position: absolute;
+	top: 0;
+	left: 55px;
+	width: 28px;
+	height: 16px;
+	margin-top: -1px;
+	background-image: url(/mos_images/v3/menu-pointer.png);
+	z-index: 9999;
+	
+}
+.nav-4 .accessible-megamenu-panel {
+	left: -38px;
+}
+.nav-4 .nav-pointer {
+	left: 90px;
+}
+.nav-5 .accessible-megamenu-panel {
+	left: -174px;
+}
+.nav-5 .nav-pointer {
+	left: 222px;
+}
+.nav-6 .accessible-megamenu-panel {
+	left: -310px;
+}
+.nav-6 .nav-pointer {
+	left: 366px;
+}
+.nav-7 .accessible-megamenu-panel {
+	left: -446px;
+}
+.nav-7 .nav-pointer {
+	left: 500px;
+}

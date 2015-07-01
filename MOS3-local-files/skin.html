@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>		<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:htmldb="http://htmldb.oracle.com" xmlns:apex="http://apex.oracle.com" class="base lt-ie9 lt-ie8 lt-ie7 ie6"> <![endif]-->
+<!--[if IE 7]>			<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:htmldb="http://htmldb.oracle.com" xmlns:apex="http://apex.oracle.com" class="base lt-ie9 lt-ie8 ie7"> <![endif]-->
+<!--[if IE 8]>			<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:htmldb="http://htmldb.oracle.com" xmlns:apex="http://apex.oracle.com" class="base lt-ie9 ie8"> <![endif]-->
+<!--[if IE 9 ]>			<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:htmldb="http://htmldb.oracle.com" xmlns:apex="http://apex.oracle.com" class="base ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:htmldb="http://htmldb.oracle.com" xmlns:apex="http://apex.oracle.com" class="base"> <!--<![endif]-->
+
+<head runat="server">
+	<title>MOS3</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<!-- APEX things -->
+	<link rel="stylesheet" href="mos_css/v3/apex_4_1.min.css" type="text/css" />
+	<!--[if IE]><link rel="stylesheet" href="mos_css/v3/apex_ie_4_1.css" type="text/css" /><![endif]-->
+	<link rel="stylesheet" href="mos_css/v3/apex-jquery-ui.min.css" type="text/css" />
+	<link rel="stylesheet" href="mos_css/v3/apex-theme_4_0.css" type="text/css" />
+	<!--[if IE]><link rel="stylesheet" href="/i/themes/theme_21/css/theme_4_0_ie.css" type="text/css" /><![endif]-->
+	<!--[if IE 6]><link rel="stylesheet" href="/i/themes/theme_21/css/theme_4_0_ie6.css" type="text/css" /><![endif]-->
+	<!--[if IE 7]><link rel="stylesheet" href="/i/themes/theme_21/css/theme_4_0_ie7.css" type="text/css" /><![endif]-->
+	<link rel="stylesheet" href="mos_css/v3/footer_layout2.css" type="text/css" />
+	<script src="mos_js/v3/apex_4_1.min.js" type="text/javascript"></script>
+	
+	<!-- Site specific includes -->
+	<!--[if IE 9]><!-->
+	<link href="mos_css/v3/bootstrap.min.css" rel="stylesheet" type="text/css">
+	<!--<![endif]-->
+
+	
+	<link href="mos_css/v3/mos3-stylesheet.css" rel="stylesheet" type="text/css">
+	<link href="mos_css/v3/mos3-footer-stylesheet.css" rel="stylesheet" type="text/css">
+	
+	<script src="mos_js/v3/jquery-1.11.2.min.js"></script>
+	<script src="mos_js/v3/bootstrap.min.js"></script>
+	<link href="mos_css/v3/font-awesome.css" rel="stylesheet" type="text/css">
+	<!--[if lt IE 9]>
+	  <link href="mos_css/v3/ie.css" rel="stylesheet" type="text/css">
+	<![endif]-->
+	
+	<!--[if lt IE 7]>
+	
+	<![endif]-->
+
+	<style type="text/css">
+		.sample-block { background: grey; height: 30px;}
+	
+	</style>
+</head>
+<body>
+<div class="page-header clearfix">
+
+	<!-- TOP NAV -->
+	<div class="container top-nav-container">
+		<div class="row">
+			
+			<ul id="TopNav" class="nav navbar-nav navbar-fixed-top top-nav" role="navigation" aria-label="Top menu">
+				<!-- 
+				<li role="presentation">
+					<a id="nav-login" role="menuitem" href="javascript:getCurrentURL('https://pre.apps.militaryonesource.mil/MOS/f?p=SSO:LOGON:0::::P1_ID,RETURNURL:321,');"><i class="fa fa-lock"></i>Log In</a>
+				</li>
+				-->
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" role="button menuitem" aria-expanded="false"><i class="fa fa-lock"></i>Logout</a>
+					<ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
+						<li role="presentation"><a role="menuitem" href="#">EAP</a></li>
+						<li role="presentation"><a role="menuitem" href="#">My Account</a></li>
+						<li role="presentation"><a role="menuitem" href="#">Order History</a></li>
+						<li role="presentation"><a role="menuitem" href="#">Log Out</a></li>
+					</ul>
+				</li>
+				<li role="presentation"><a role="menuitem" href="#"><i class="fa fa-comment"></i>Contact Us</a></li>
+				<li class="inverted" role="presentation"><a role="menuitem" href="/shopping-bag"><i class="fa fa-shopping-cart"></i>Shopping Cart</a></li>
+			</ul>
+		
+		</div>
+	</div>
+	<!-- END TOP NAV -->
+	
+	<!-- HEADER -- LOGO -- TAGLINE -- SEARCH -->
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-2 col-xs-2">
+				<a class="logo" href="#"><img src="mos_images/v3/mos-logo.jpg" alt="Military OneSource Logo" /></a>
+			</div>
+			<div class="col-sm-5 col-xs-4">
+				<div class="tagline-wrapper">
+					<p class="tagline">
+						<span class="nowrap">Call. Click. Connect</span>&nbsp;&nbsp;&nbsp;
+						<span class="tagline-cta nowrap">800-342-9647</span>
+					</p>
+				</div>
+			</div>
+			<div class="col-sm-5 col-xs-6">
+				<div class="search-wrapper">
+					<label for="search-mos" id="SEARCH-MOS">Search for...</label>
+					<input class="textbox" type="text" name="search-mos" size="32"/>
+					<a class="btn-go" href="#">
+						<span class="hide-text">GO</span>
+						<i class="fa fa-search"></i>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- END HEADER -->
+	
+</div>
+<!-- END .page-header -->
+
+<div class="page-body clearfix">
+	<div class="container">
+		<div class="row main-nav clearfix">
+			<p></p>
+        <!-- Menu added -->         
+        <nav class="navbar navbar-default navbar-static">
+            <div class="navbar-header">
+                <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".js-navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+
+
+            <div class="collapse navbar-collapse js-navbar-collapse">
+                <ul class="nav navbar-nav">
+                    
+                    <li class="dropdown dropdown-large">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" tabindex="1"> Confidential Help   <b class="caret"></b></a>
+
+                        <ul class="dropdown-menu dropdown-menu-large row col-sm-12" >
+                            <li class="col-sm-3">
+                                <ul>
+                                    <li class="dropdown-header span-header">Other Resources</li>
+                                    <li><a href="#" >Traumatic Brian Injury</a></li>
+                                    <li><a href="#" >Post-Tramatic Stress Disorder</a></li>
+                                    <li><a href="#">Military Crisis Line</a></li>
+                                    <li class="disabled"><a href="#" >800.273.TALK(8255)</a></li>
+                                    <li><a href="#" > DoD Safe Helpline</a></li>
+                                    <li><a href="#" >Sexual Assault Support</a></li>
+                                    <li class="disabled"><a href="#">877.995.5247</a></li>
+                                </ul>
+                            </li>
+                            <li class="col-sm-6">
+                                <ul>
+                                    <li><blockquote style="font-size:14px;">Confidential services, indluding non-medical conseling and speciality consultations, are available through Military OneSource. Eligible individuals may receive confidential services at no cost. Chech eligibility. International Calling Options.</blockquote></li>
+                                    <li class="dropdown-header">Non-medical Counseling</li>
+                                    <li><a href="#">Face-to-Face Counseling</a></li>
+                                    <li><a href="#">Online Counseling</a></li>
+                                    <li><a href="#">Telephonic Counseling</a></li>
+                                    <li><a href="#">Video Counseling</a></li>
+                                    <li class="divider"></li>
+                                    <li class="dropdown-header">Specialty Consultations </li>
+                                    <li><a href="#">Adoption</a></li>
+                                    <li><a href="#">Adult Disability Care</a></li>
+                                    <li><a href="#">Education</a></li>
+                                    <li><a href="#">Elder Care</a></li>
+                                    <li><a href="#">Health and Wellness Coaching</a></li>
+                                    <li><a href="#">Special Needs</a></li>
+                                    <li><a href="#">Wounded Warrior</a></li>
+                                    <li class="dropdown-header">Other Services and Counseling</li>
+                                    <li><a href="#">Document Translation</a></li>
+                                    <li><a href="#">Financial Counseling</a></li>
+                                    <li><a href="#">Language Interpretation Services</a></li>
+                                    <li><a href="#">SECO Counseling</a></li>
+                                    <li><a href="#">Tax Services</a></li>
+
+                                </ul>
+                            </li>
+                            <li class="col-sm-3">
+                                <ul>
+                                    <li class="disable">Contact a Military OneSource consultant now</li>
+                                    <li class="disable">800.342.9647<br><br></li>
+                                    <li><strong> Log in for counseling </strong></li>
+                                    <li><p>Log in to your Military OneSouce account to access online counseling services.</p></li>
+                                    <li><button> LOG IN </button></li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    </li> 
+                    
+				<!-- Military Life Topics -->
+                <li class="dropdown dropdown-large">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown"> Military Life Topics <b class="caret"></b></a>
+
+					<ul style="background-color:#eeeeee" class="dropdown-menu dropdown-menu-large row">
+						<li class="col-sm-8">
+							<ul>
+								<li>
+                                    <blockquote>
+                                        Providing information and resources to help deal with unique challenges of military life 
+                                    </blockquote>    
+                                </li>
+								<li class="">
+                                  <div class="row">
+                                    <div class="col-sm-4" style="background-color:lavender;">
+                                        <ul class="list-unstyled">
+                                            <li><a href="#"> Casualty Assistance </a></li>
+                                            <li><a href="#"> Child Abuse and Domestic Abuse </a></li>
+                                             <li><a href="#"> Children, Youth & Teens </a></li>
+                                             <li><a href="#"> Commissaries & Exchanges </a></li>
+                                             <li><a href="#"> Crisis and Prevention </a></li>
+                                             <li><a href="#"> Deployment </a></li>
+                                             <li><a href="#"> Disaster Resources </a></li>
+                                             <li><a href="#"> EFMP/Special Needs </a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-sm-4" style="background-color:lavenderblush;">
+                                        <ul class="list-unstyled">
+                                            <li><a href="#"> Employee Assistance Program </a></li>
+                                            <li><a href="#"> Healthy Base Intiative </a></li>
+                                            <li><a href="#"> K-12 and College Education </a></li>
+                                            <li><a href="#"> Legal Information </a></li>
+                                            <li><a href="#"> Money Management </a></li>
+                                            <li><a href="#"> Moral, Welfare & Recreation </a></li>
+                                            <li><a href="#"> Moving </a></li>
+                                            <li><a href="#"> Non-Medical Counseing </a></li>
+                                        </ul>                                      
+                                      </div>
+                                    <div class="col-sm-4" style="background-color:lavender;">
+                                        <ul class="list-unstyled">
+                                            <li><a href="#"> Parenting </a></li>
+                                            <li><a href="#"> Relationship Health & Family Wellness </a></li>
+                                            <li><a href="#"> Sexual Assult </a></li>
+                                            <li><a href="#"> Spouse Education & Career Opportunities </a></li>
+                                            <li><a href="#"> Transition Assistance </a></li>
+                                            <li><a href="#"> Voluntary Education </a></li>
+                                            <li><a href="#"> Wounded Warrior </a></li>
+                                        </ul>                                          
+                                    </div>
+                                  </div>
+                                </li>
+							</ul>
+						</li>
+						<li class="col-sm-2">
+							<ul>
+								<li><blockquote style="font-size:14px;">
+                                    <p> Employee Assistance Program </p>
+                                    Click here to access confidential non-medical counseling and resources to balance and improve work pereformance and overall health. 
+                                    </blockquote></li>
+							</ul>
+						</li>
+
+					</ul>
+				</li>                    
+
+                                    <li class="dropdown dropdown-large">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown"> Monthly Focus <b class="caret"></b></a>
+
+					<ul style="background-color:#eeeeee" class="dropdown-menu dropdown-menu-large row">
+						<li class="col-sm-10">
+							<ul>
+								<li>
+                                    <blockquote>
+                                        Every April, we celebrate the Month of the Military Child. 
+                                    </blockquote>    
+                                </li>
+								<li class="">
+                                  <div class="row">
+                                    <div class="col-sm-4" style="background-color:lavender;">
+                                        <ul class="list-unstyled">
+                                            <li><a href="#"> Purple Up! </a></li>
+                                            <li><a href="#"> Youth Sponshrhip Program </a></li>
+                                            <li><a href="#"> Military Extension Intersnship Program </a></li>
+                                            <li><a href="#"> Grief Counseing Options for Military Survivors </a></li>
+
+                                        </ul>
+                                    </div>
+                                  </div>
+                                </li>
+							</ul>
+						</li>
+						<li class="col-sm-2">
+							<ul>
+								<li><blockquote style="font-size:14px;">
+                                    <p> Featured Podcast </p>
+                                    <p> Military Extension Intership </p> 
+                                    </blockquote></li>
+							</ul>
+						</li>
+
+					</ul>
+				</li>  
+                
+				<!-- Social Media Hub -->
+                <li class="dropdown dropdown-large">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown"> Military Life Topics <b class="caret"></b></a>
+
+					<ul style="background-color:#eeeeee" class="dropdown-menu dropdown-menu-large row">
+						<li class="col-sm-8">
+							<ul>
+								<li>
+                                    <blockquote>
+                                        The Military OneSouce community... connecting you 24/7 
+                                    </blockquote>    
+                                </li>
+								<li class="">
+                                  <div class="row">
+                                    <div class="col-sm-4" style="background-color:lavender;">
+                                        <ul class="list-unstyled">
+                                            <li><a href="#"> Social Media </a></li>
+                                            <li><a href="#"> Blog Bigrade </a></li>
+                                             <li><a href="#"> Podcast </a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-sm-4" style="background-color:lavenderblush;">
+                                        <ul class="list-unstyled">
+                                            <li><a href="#"> Webinars </a></li>
+                                            <li><a href="#"> Widgets and Badges </a></li>
+                                            <li><a href="#"> Videos </a></li>
+                                        </ul>                                      
+                                      </div>
+                                  </div>
+                                </li>
+							</ul>
+						</li>
+						<li class="col-sm-2">
+							<ul>
+								<li><blockquote style="font-size:14px;">
+                                    <p> Calling All Bloggers! </p>
+                                    If you would like to become a blogger for Blog Brigate, click the link below to find out how! 
+                                    </blockquote></li>
+							</ul>
+						</li>
+
+					</ul>
+				</li> 
+                    
+                    
+                    
+                </ul>    
+
+            </div><!-- /.nav-collapse -->
+        </nav>        
+  
+		</div>
+	</div>
+	
+	<div class="container container-bg">
+		<div class="row section-row">
+			<div class="col-md-12">
+				<div class="cta-highlight clearfix">
+					<div class="col-md-4">
+						<h2>Who you gonna call<br /> for tax help?</h2>
+						<div class="timer-row clearfix" id="countdown_timer">
+							<div class="time-block">
+							<div class="count rounded"><span id="countdown_weeks">9</span></div>
+							    <div class="unit">weeks</div>
+							</div>
+							<div class="time-block">
+							<div class="count rounded"><span id="countdown_days">0</span></div>
+							    <div class="unit">days</div>
+							</div>
+							<div class="time-block">
+							  <div class="count rounded"><span id="countdown_hours">2</span></div>
+							    <div class="unit">hours</div>
+							</div>
+							<div class="time-block">
+							<div class="count rounded"><span id="countdown_minutes">12</span></div>
+							    <div class="unit">mins</div>
+							</div>
+							<div class="time-block">
+							<div class="count rounded"><span id="countdown_seconds">6</span></div>
+							    <div class="unit">secs</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="icms-content">
+							<p>For expert advice and help with your military-specific tax questions, visit Military OneSource's <a href="#">tax services</a> page.</p>
+							<p class="cta-em">Countdown to April 15, 2015</p>
+						</div>
+					</div>	
+					<div class="col-md-4">
+						<img src="mos_images/v3/tax-img.jpg" width="225" alt="" />
+					</div>	
+				</div>
+			</div>	
+		</div>
+		<!-- END .row .cta-highlight -->
+		
+		
+		<!-- CAROUSEL : WHATS TRENDING -->
+		
+		<div class="row carousel-row">	
+			<div class="col-md-12">
+				<h2>What's Trending</h2>	
+				<div class="carousel hp-carousel">
+					<div class="slide">
+						<a class="icon-img" href="#">
+							<img src="assets/carousel-tmm-old/carousel_01.gif">
+						</a>
+						<div class="title"> 
+							<a href="#">Enjoying National Parks as a Military FamilyEnjoying National Parks as a Military Family</a>
+						</div>
+					</div>
+					<div class="slide">			
+						<a class="icon-img" href="#">
+							<img src="assets/carousel-tmm-old/carousel_02.gif">
+						</a>
+						<div class="title"> 
+							<a href="#">Best Kept Secrets</a>
+						</div>	
+					</div>
+					<div class="slide">
+						<a class="icon-img" href="#">
+							<img src="assets/carousel-tmm-old/carousel_03.gif">
+						</a>
+						<div class="title"> 
+							<a href="#">Space-A Travel</a>
+						</div>						
+					</div>
+					
+					<div class="slide">
+						<a class="icon-img" href="#">
+							<img src="assets/carousel-tmm-old/carousel_04.gif">
+						</a>
+						<div class="title"> 
+							<a href="#">Equipment Rentals from Morale, Welfare and Recreation</a>
+						</div>	
+					</div>
+					<div class="slide">
+						<a class="icon-img" href="#">
+							<img src="assets/carousel-tmm-old/carousel_01.gif">
+						</a>
+						<div class="title"> 
+							<a href="#">Another External Link 2</a>
+						</div>	
+					</div>
+					<div class="slide">
+						<a class="icon-img" href="#">
+							<img src="assets/carousel-tmm-old/carousel_02.gif">
+						</a>
+						<div class="title"> 
+							<a href="#">Another External Link 3</a>
+						</div>
+					</div>
+					<div class="slide">
+						<a class="icon-img" href="#">
+							<img src="assets/carousel-tmm-old/carousel_03.gif">
+						</a>
+						<div class="title"> 
+							<a href="#">Another External Link 3</a>
+						</div>
+					</div>
+				</div> 
+				<!-- END .carousel -->
+			</div>
+			<!-- END .col-md-12 -->
+		</div>
+		<!-- END .row -->
+		
+		<!-- CAROUSEL : LOOKING FOR THIS -->
+		
+		<div class="row carousel-row">	
+			<div class="col-md-12">
+				<h2>Looking for this?</h2>	
+				<div id="Carousel-tellMeMore" class="carousel">
+					<div class="slide">
+						<a class="icon-img" href="#">
+							<img src="assets/carousel-tmm-old/carousel_01.gif">
+						</a>
+						<div class="title"> 
+							<a href="#">Enjoying National Parks as a Military FamilyEnjoying National Parks as a Military Family</a>
+						</div>
+					</div>
+					<div class="slide">			
+						<a class="icon-img" href="#">
+							<img src="assets/carousel-tmm-old/carousel_02.gif">
+						</a>
+						<div class="title"> 
+							<a href="#">Best Kept Secrets</a>
+						</div>	
+					</div>
+					<div class="slide">
+						<a class="icon-img" href="#">
+							<img src="assets/carousel-tmm-old/carousel_03.gif">
+						</a>
+						<div class="title"> 
+							<a href="#">Space-A Travel</a>
+						</div>						
+					</div>
+					
+					<div class="slide">
+						<a class="icon-img" href="#">
+							<img src="assets/carousel-tmm-old/carousel_04.gif">
+						</a>
+						<div class="title"> 
+							<a href="#">Equipment Rentals from Morale, Welfare and Recreation</a>
+						</div>	
+					</div>
+					<div class="slide">
+						<a class="icon-img" href="#">
+							<img src="assets/carousel-tmm-old/carousel_01.gif">
+						</a>
+						<div class="title"> 
+							<a href="#">Another External Link 2</a>
+						</div>	
+					</div>
+					<div class="slide">
+						<a class="icon-img" href="#">
+							<img src="assets/carousel-tmm-old/carousel_02.gif">
+						</a>
+						<div class="title"> 
+							<a href="#">Another External Link 3</a>
+						</div>
+					</div>
+					<div class="slide">
+						<a class="icon-img" href="#">
+							<img src="assets/carousel-tmm-old/carousel_03.gif">
+						</a>
+						<div class="title"> 
+							<a href="#">Another External Link 3</a>
+						</div>
+					</div>
+				</div> 
+				<!-- END .carousel -->
+			</div>
+			<!-- END .col-md-12 -->
+		</div>
+		<!-- END .row -->
+	</div>
+	<!-- END .container -->
+</div>
+<!-- END .page-body -->
+
+
+<div class="page-band-inverted clearfix">
+	<div class="container container-wide">
+		<div class="row">
+			<div class="col-md-6">
+
+			</div>
+			<!-- END .col-md-6 -->
+			<div class="col-md-6">
+
+			</div>
+			<!-- END .col-md-6 -->
+		</div>
+		<!-- END .row -->
+	</div>
+	<!-- END .container -->
+</div>
+<!-- END .page-band-inverted -->
+
+
+<div class="page-band clearfix">
+	<div class="container container-wide">
+		<div class="row">
+			<div class="col-md-5 col-sm-12">
+				<div class="icms-conent">
+					<p>Service members, family members, service providers, and leaders rely on Military OneSource for policy, procedures, timely articles, cutting-edge social media tools, and support. All in one place, empowering our military community.</p>
+				</div>
+			</div>
+			<!-- END .col-md-5 -->
+			<div class="center-content col-md-3 col-sm-6 col-xs-12">
+				<a class="logo-link logo-dod right-gutter" target="_blank" href="http://prhome.defense.gov/" title="DoD Logo">
+					<img src="mos_images/v3/footer/logo-dod.gif" alt="Department of Defense Badge" title="DoD Logo">
+                </a>
+                <a class="logo-link logo-mcfp" href="http://www.militaryonesource.mil/footer?content_id=250644" title="Military Community and Family Policy">
+                	<img src="mos_images/v3/footer/logo-mcfp.gif" alt="Military Community and Family Policy Badge" title="Military Community and Family Policy">
+                </a>
+			</div>
+			<!-- END .col-md-3 -->
+			<div class="center-content col-md-4 col-sm-6 col-xs-12">
+				<a class="logo-link logo-usagov right-gutter" target="_blank" href="https://www.usa.gov/" title="USA.gov Logo">
+					<img src="mos_images/v3/footer/logo-usagov.gif" alt="USA.gov Logo" title="USA.gov Logo">
+				</a>
+				<a class="logo-link logo-joiningforces" target="_blank" href="http://www.whitehouse.gov/joiningforces" title="Joining Forces Logo">
+					<img src="mos_images/v3/footer/logo-joiningforces.gif" alt="Joining Forces Logo" title="Joining Forces Logo">
+                </a>
+			</div>
+			<!-- END .col-md-4 -->
+		</div>
+		<!-- END .row -->
+	</div>
+	<!-- END .container -->
+</div>
+<!-- END .page-band -->
+
+<div id="FooterLayout-9" class="page-footer clearfix">
+	<div class="container container-wide">
+		<div class="row clearfix">
+			<div class="footer-col col-md-3 col-sm-6">
+				<h2>Military OneSource</h2>
+				<ul>
+					<li><a href="#">About Us</a></li>
+					<li><a href="#">Contact Us</a></li>
+					<li><a href="#">Frequently Asked Questions</a></li>
+					<li><a href="#">MC&amp;FP Websites &amp; Applications</a></li>
+					<li><a href="#">Reports &amp; Surveys</a></li>
+					<li><a href="#">Site Map</a></li>
+				</ul>
+			</div>
+			<!-- END .col-md-3 -->
+			<div class="footer-col col-md-3 col-sm-6">
+				<h2>Resources</h2>
+				<ul>
+					<li><a href="#">Confidential Help</a></li>
+					<li><a href="#">Family &amp; Relationships</a></li>
+					<li><a href="#">Finance &amp; Legal</a></li>
+					<li><a href="#">Health &amp; Wellness</a></li>
+					<li><a href="#">Education &amp; Employment</a></li>
+					<li><a href="#">On &amp; Off-Base Living</a></li>
+					<li><a href="#">Deployment &amp; Transition</a></li>
+				</ul>
+			</div>
+			<!-- END .col-md-3 -->
+			<div class="footer-col col-md-3 col-sm-6">
+				<h2>Subscribe to eNewsletters</h2>
+				<ul>
+					<li><a href="#">Military OneSource eNewsletter</a></li>
+					<li><a href="#">Spouse Education &amp; Career</a></li>
+					<li><a href="#">Opportunities eNewsletter</a></li>
+					<li><a href="#">The Exceptional Advocate</a></li>
+					<li><a href="#">Archives</a></li>
+				</ul>
+			</div>
+			<!-- END .col-md-3 -->
+			<div class="footer-col col-md-3 col-sm-6">
+				<h2>Legal and Security</h2>
+				<ul>
+					<li><a href="#">Accessibility</a></li>
+					<li><a href="#">Accessibility Tools</a></li>
+					<li><a href="#">Disclaimer</a></li>
+					<li><a href="#">DoD No Fear Act</a></li>
+					<li><a href="#">Download a PDF reader</a></li>
+					<li><a href="#">FOIA</a></li>
+					<li><a href="#">Privacy Act Statement &amp; Security</a></li>
+				</ul>
+			</div>
+			<!-- END .col-md-3 -->
+		</div>
+		<!-- END .row -->
+		
+		<div class="row clearfix">
+			<div class="col-xs-12">
+				<p class="footer-release">Release 04.15.15.1.152.229.25.76.2</p>
+			</div>
+		</div>
+	</div>
+	<!-- END .container -->
+</div>
+<!-- END .page-footer -->
+
+</body>
+</html>

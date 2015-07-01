@@ -1,0 +1,112 @@
+/* float clearing for IE7 */
+*+html .clearfix {
+    min-height: 1%;
+}
+
+/* float clearing for everyone else */
+.clearfix:before, .clearfix:after { content: ""; display: table; }
+.clearfix:after { clear: both; }
+/* For IE 6/7 (trigger hasLayout) */
+.clearfix { *zoom: 1; } 
+
+/* footer - description and logos - white band */
+.page-band,
+.page-footer {
+	font-size: 14px;
+	
+}
+.page-band {
+  padding: 30px 0 20px;
+  background: #fff;
+  border-top: 6px solid #b51e25;
+}
+.logo-link {
+	text-decoration:none;
+	border:0;
+	outline:none;
+}
+.logo-link img {
+	width: 150px;
+}
+.logo-link.logo-dod img,
+.logo-link.logo-mcfp img {
+	margin-top: 10px;
+	width: 90px;
+}
+.logo-link.right-gutter {
+	margin-right: 25px;
+}
+.logo-dod.right-gutter {
+	margin-right: 30px;	
+}
+
+/*  footer - link columns - grey band */
+.page-footer  *
+{
+	font-family: "Open Sans", Arial, Sans-serif;
+}
+.page-footer 
+{	
+	background: #ebebeb;
+}
+.page-band h2, 
+.page-band ul, 
+.page-band ol, 
+.page-band p,
+.page-footer h2, 
+.page-footer ul, 
+.page-footer ol, 
+.page-footer p {
+	font-size: 1em; 
+}
+@media (min-width: 1200px)
+.page-footer  .container-wide {
+  width: 1110px;
+}
+@media (min-width: 992px)
+.page-footer  .container-wide {
+  width: 980px;
+}
+@media (min-width: 768px)
+.page-footer  .container-wide {
+  width: 750px;
+}
+.page-footer  .container-wide {
+  min-width: 320px;
+}
+.page-footer {
+	margin: 0 auto;
+	padding: 25px 0;
+}
+.page-footer .container {
+	margin: 0 auto;
+	padding: 0 15px;
+}
+.page-footer h2 {
+	line-height: 1.8em;
+	text-transform: uppercase;
+	color: #231f20;
+}
+.page-footer ul li {
+	list-style-position: outside;
+}
+.lt-ie9 .page-footer .footer-col {
+	width: 20%;
+	margin-bottom: 25px;
+}
+.footer-col ul {
+	list-style: none;
+	margin: 0 0 20px;
+}
+.footer-col ul li {
+	list-style: none;
+	background: none;
+	margin: 0 0 8px;
+	padding: 0;
+	line-height: 1.4em;
+}
+p.footer-release {
+	text-align: center;
+	color: #666666;
+	font-size: .8em;
+}

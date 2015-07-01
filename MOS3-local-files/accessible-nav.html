@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>		<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:htmldb="http://htmldb.oracle.com" xmlns:apex="http://apex.oracle.com" class="base lt-ie9 lt-ie8 lt-ie7 ie6"> <![endif]-->
+<!--[if IE 7]>			<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:htmldb="http://htmldb.oracle.com" xmlns:apex="http://apex.oracle.com" class="base lt-ie9 lt-ie8 ie7"> <![endif]-->
+<!--[if IE 8]>			<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:htmldb="http://htmldb.oracle.com" xmlns:apex="http://apex.oracle.com" class="base lt-ie9 ie8"> <![endif]-->
+<!--[if IE 9 ]>			<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:htmldb="http://htmldb.oracle.com" xmlns:apex="http://apex.oracle.com" class="base ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:htmldb="http://htmldb.oracle.com" xmlns:apex="http://apex.oracle.com" class="base"> <!--<![endif]-->
+
+<head runat="server">
+	<title>MOS3</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<!-- APEX things -->
+	<link rel="stylesheet" href="mos_css/v3/apex_4_1.min.css" type="text/css" />
+	<!--[if IE]><link rel="stylesheet" href="mos_css/v3/apex_ie_4_1.css" type="text/css" /><![endif]-->
+	<link rel="stylesheet" href="mos_css/v3/apex-jquery-ui.min.css" type="text/css" />
+	<link rel="stylesheet" href="mos_css/v3/apex-theme_4_0.css" type="text/css" />
+	<!--[if IE]><link rel="stylesheet" href="/i/themes/theme_21/css/theme_4_0_ie.css" type="text/css" /><![endif]-->
+	<!--[if IE 6]><link rel="stylesheet" href="/i/themes/theme_21/css/theme_4_0_ie6.css" type="text/css" /><![endif]-->
+	<!--[if IE 7]><link rel="stylesheet" href="/i/themes/theme_21/css/theme_4_0_ie7.css" type="text/css" /><![endif]-->
+	<link rel="stylesheet" href="mos_css/v3/footer_layout2.css" type="text/css" />
+	<script src="mos_js/v3/apex_4_1.min.js" type="text/javascript"></script>
+	
+	<!-- Site specific includes -->
+	<!--[if IE 9]><!-->
+	<link href="mos_css/v3/bootstrap.min.css" rel="stylesheet" type="text/css">
+	<link href="mos_js/v3/html5shiv.min.js" rel="stylesheet" type="text/css">
+	<!--<![endif]-->
+	<link rel="stylesheet" href="mos_css/v3/megamenu.css" type="text/css" />
+	
+	<link href="mos_css/v3/mos3-stylesheet.css" rel="stylesheet" type="text/css">
+	
+	<link href="mos_css/v3/mos3-footer-stylesheet.css" rel="stylesheet" type="text/css">
+	
+	<script src="mos_js/v3/jquery-1.11.2.min.js"></script>
+	<script src="mos_js/v3/bootstrap.min.js"></script>
+	<script src="mos_js/v3/jquery-accessibleMegaMenu.js"></script>
+	<script src="mos_js/v3/main.js"></script>
+	
+	<link href="mos_css/v3/font-awesome.css" rel="stylesheet" type="text/css">
+	
+	<!--[if lt IE 9]>
+	  <link href="mos_css/v3/ie.css" rel="stylesheet" type="text/css">
+	<![endif]-->
+	
+	<!--[if lt IE 7]>
+	
+	<![endif]-->
+
+	<style type="text/css">
+		.sample-block { background: grey; height: 30px;}
+	</style>
+</head>
+<body>
+<h2>font size</h2>
+<div class="page-header clearfix">
+
+	<!-- TOP NAV -->
+	<div class="container top-nav-container">
+		<div class="row">
+			
+			<ul id="TopNav" class="nav navbar-nav navbar-fixed-top top-nav" role="navigation" aria-label="Top menu">
+				<!-- 
+				<li role="presentation">
+					<a id="nav-login" role="menuitem" href="javascript:getCurrentURL('https://pre.apps.militaryonesource.mil/MOS/f?p=SSO:LOGON:0::::P1_ID,RETURNURL:321,');"><i class="fa fa-lock"></i>Log In</a>
+				</li>
+				-->
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" role="button menuitem" aria-expanded="false"><i class="fa fa-lock"></i>Logout</a>
+					<ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
+						<li role="presentation"><a role="menuitem" href="#">EAP</a></li>
+						<li role="presentation"><a role="menuitem" href="#">My Account</a></li>
+						<li role="presentation"><a role="menuitem" href="#">Order History</a></li>
+						<li role="presentation"><a role="menuitem" href="#">Log Out</a></li>
+					</ul>
+				</li>
+				<li role="presentation"><a role="menuitem" href="#"><i class="fa fa-comment"></i>Contact Us</a></li>
+				<li class="inverted" role="presentation"><a role="menuitem" href="/shopping-bag"><i class="fa fa-shopping-cart"></i>Shopping Cart</a></li>
+			</ul>
+		
+		</div>
+	</div>
+	<!-- END TOP NAV -->
+	
+	<!-- HEADER -- LOGO -- TAGLINE -- SEARCH -->
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-2 col-xs-2">
+				<a class="logo" href="#"><img src="mos_images/v3/mos-logo.jpg" alt="Military OneSource Logo" /></a>
+			</div>
+			<div class="col-sm-5 col-xs-4">
+				<div class="tagline-wrapper">
+					<p class="tagline">
+						<span class="nowrap">Call. Click. Connect</span>&nbsp;&nbsp;&nbsp;
+						<span class="tagline-cta nowrap">800-342-9647</span>
+					</p>
+				</div>
+			</div>
+			<div class="col-sm-5 col-xs-6">
+				<div class="search-wrapper">
+					<label for="search-mos" id="SEARCH-MOS">Search for...</label>
+					<input class="textbox" type="text" name="search-mos" size="32"/>
+					<a class="btn-go" href="#">
+						<span class="hide-text">GO</span>
+						<i class="fa fa-search"></i>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- END HEADER -->
+	
+</div>
+<!-- END .page-header -->
+
+<div class="page-body clearfix">
+	<div class="container">
+	<div class="row clearfix">
+		<button type="button" class="navbar-toggle">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+			
+	</div>
+		<div class="row main-nav clearfix">		
+			<nav class="megamenu">
+			    <ol>
+			        <li class="nav-1">
+			            <h2><a href="#">Confidential Help</a></h2>
+
+			            <div class="cols-3">
+							<div class="nav-pointer"></div>
+			                <ol>
+			                	<li class="accessible-megamenu-panel-group side-col">
+			                        <ol>
+			                        	<li><a href="#"><strong>What Military OneSource Offers</strong></a></li>
+			                            <li class="">Contact a Military OneSource consultant now</li>
+										<li class="cta-phone accent-1">800.342.9647</li>
+										<li>
+											<p class="title-2"><strong> Log in for counseling </strong></p>
+											<p class="no-margins">Log in to your Military OneSouce account to access online counseling services.</p>
+											<button class="btn-primary"> Login </button>
+											<p>Don't have a login yet? <br /><a href"#">Check eligibility</a> and <a href="#">Register now</a></p>
+										</li>		                        
+									</ol>
+			                    </li>
+			                    
+			                    <li class="accessible-megamenu-panel-group center-col">
+			                        <ol>
+			                            <li>
+			                            	<p>Confidential services, including <a href="#">non-medical counseling</a> and <a href="#">speciality consultations</a>, are available through Military OneSource. Eligible individuals may receive confidential services at no cost. <a href="#">Check eligibility</a>. <a href="#">International Calling Options.</a></p>
+			                            </li>
+										
+										<ol class="col-3">
+											<li class="dropdown-header">Non-medical Counseling</li>
+											<li><a href="#">Face-to-Face Counseling</a></li>
+											<li><a href="#">Online Counseling</a></li>
+											<li><a href="#">Telephonic Counseling</a></li>
+											<li><a href="#">Video Counseling</a></li>
+										</ol>
+										
+										<ol class="col-3">
+											<li class="dropdown-header">Specialty Consultations </li>
+											<li><a href="#">Adoption</a></li>
+											<li><a href="#">Adult Disability Care</a></li>
+											<li><a href="#">Education</a></li>
+											<li><a href="#">Elder Care</a></li>
+											<li><a href="#">Health and Wellness Coaching</a></li>
+											<li><a href="#">Special Needs</a></li>
+											<li><a href="#">Wounded Warrior</a></li>
+										</ol>
+										
+										<ol class="col-3">
+											<li class="dropdown-header">Other Services and Counseling</li>
+											<li><a href="#">Document Translation</a></li>
+											<li><a href="#">Financial Counseling</a></li>
+											<li><a href="#">Language Interpretation Services</a></li>
+											<li><a href="#">SECO Counseling</a></li>
+											<li><a href="#">Tax Services</a></li>
+										</ol>
+			                        </ol>
+			                    </li>
+			                    
+			                    <li class="accessible-megamenu-panel-group side-col last-col">
+		                            <div class="title-1">Other Resources</div>
+		                            
+		                            <ol class="col-2">
+										<li class="hr-bottom"><a href="#" >Traumatic Brian Injury</a></li>
+										<li class="hr-bottom"><a href="#" >Post-Tramatic Stress Disorder</a></li>
+		                            </ol>
+		                            <ol class="col-2">
+										<li class="hr-bottom">
+											<a href="#">Military Crisis Line</a>
+											<p class="cta-phone accent-2">800.273.TALK(8255)</p>
+										</li>
+										<li>
+											<a href="#" > DoD Safe Helpline</a><br />
+											<a href="#" >Sexual Assault Support</a>
+											<p class="cta-phone accent-2">877.995.5247</p>
+										</li>
+		                            </ol>
+			                  
+			                    </li>
+			                    
+			                </ol>
+			            </div>
+			        </li>
+			        
+			        <li class="nav-2">
+			            <h2><a href="#">Family &amp; Relationships</a></h2>
+			            <div class="cols-2">	
+			            	<div class="nav-pointer"></div>		    
+			                <ol>
+			                    <li class="accessible-megamenu-panel-group">			                        
+			                        <p>NAV-2 Family &amp; Relationships - Let us help you make the most of your new assignment. From planning each step of your move to confirming that your new commissary does &mdash; in fact &mdash; stock your favorite kind of cereal, we can help. And what would a new place be without a little adventure? Don't forget to weave relaxation and recreation into your plans.</p>
+			                        <ol class="col-2">
+			                            <li><a href="#">Relocation</a></li>
+			                            <li><a href="#">Disaster Preparedness and Recovery</a></li>
+			                            <li><a href="#">Community and Support</a></li>
+			                        </ol>
+			                        <ol class="col-2">
+			                            <li><a href="#">Commissaries and Exchanges</a></li>
+			                            <li><a href="#">Recreation</a></li>
+			                            <li><a href="#">Travel and Vacation</a></li>
+			                        </ol>
+			                    </li>
+			                    <li class="accessible-megamenu-panel-group side-col">
+			                        <p class="title no-margins"><a href="#">Have you tried<br /> Space-A travel?</a></p>
+			                        <div class="img-wrapper"></div>
+			                    </li>
+			                </ol>
+			            </div>
+			        </li>
+			        
+			        <li class="nav-3">
+			            <h2><a href="#">Finance &amp; Legal</a></h2>
+			            <div class="cols-2">	
+			            	<div class="nav-pointer"></div>		    
+			                <ol>
+			                    <li class="accessible-megamenu-panel-group">			                        
+			                        <p>NAV-3 Finance &amp; Legal - Let us help you make the most of your new assignment. From planning each step of your move to confirming that your new commissary does &mdash; in fact &mdash; stock your favorite kind of cereal, we can help. And what would a new place be without a little adventure? Don't forget to weave relaxation and recreation into your plans.</p>
+			                        <ol class="col-2">
+			                            <li><a href="#">Relocation</a></li>
+			                            <li><a href="#">Disaster Preparedness and Recovery</a></li>
+			                            <li><a href="#">Community and Support</a></li>
+			                        </ol>
+			                        <ol class="col-2">
+			                            <li><a href="#">Commissaries and Exchanges</a></li>
+			                            <li><a href="#">Recreation</a></li>
+			                            <li><a href="#">Travel and Vacation</a></li>
+			                        </ol>
+			                    </li>
+			                    <li class="accessible-megamenu-panel-group side-col">
+			                        <p class="title no-margins"><a href="#">Have you tried<br /> Space-A travel?</a></p>
+			                        <div class="img-wrapper"></div>
+			                    </li>
+			                </ol>
+			            </div>
+			        </li>
+			        
+			        <li class="nav-4">
+			            <h2><a href="#">Health &amp; Wellness</a></h2>
+			            <div class="cols-2">
+			            	<div class="nav-pointer"></div>			    
+			                <ol>
+			                    <li class="accessible-megamenu-panel-group">			                        
+			                        <p>NAV-4 Health &amp; Wellness - Let us help you make the most of your new assignment. From planning each step of your move to confirming that your new commissary does &mdash; in fact &mdash; stock your favorite kind of cereal, we can help. And what would a new place be without a little adventure? Don't forget to weave relaxation and recreation into your plans.</p>
+			                        <ol class="col-2">
+			                            <li><a href="#">Relocation</a></li>
+			                            <li><a href="#">Disaster Preparedness and Recovery</a></li>
+			                            <li><a href="#">Community and Support</a></li>
+			                        </ol>
+			                        <ol class="col-2">
+			                            <li><a href="#">Commissaries and Exchanges</a></li>
+			                            <li><a href="#">Recreation</a></li>
+			                            <li><a href="#">Travel and Vacation</a></li>
+			                        </ol>
+			                    </li>
+			                    <li class="accessible-megamenu-panel-group side-col">
+			                        <p class="title no-margins"><a href="#">Have you tried<br /> Space-A travel?</a></p>
+			                        <div class="img-wrapper"></div>
+			                    </li>
+			                </ol>
+			            </div>
+			        </li>	
+			        	
+			        <li class="nav-5">
+			            <h2><a href="#">Education &amp; Employment</a></h2>
+			            <div class="cols-2">	
+			            	<div class="nav-pointer"></div>		    
+			                <ol>
+			                    <li class="accessible-megamenu-panel-group">			                        
+			                        <p>NAV-5 Edu &amp; Employment - Let us help you make the most of your new assignment. From planning each step of your move to confirming that your new commissary does &mdash; in fact &mdash; stock your favorite kind of cereal, we can help. And what would a new place be without a little adventure? Don't forget to weave relaxation and recreation into your plans.</p>
+			                        <ol class="col-2">
+			                            <li><a href="#">Relocation</a></li>
+			                            <li><a href="#">Disaster Preparedness and Recovery</a></li>
+			                            <li><a href="#">Community and Support</a></li>
+			                        </ol>
+			                        <ol class="col-2">
+			                            <li><a href="#">Commissaries and Exchanges</a></li>
+			                            <li><a href="#">Recreation</a></li>
+			                            <li><a href="#">Travel and Vacation</a></li>
+			                        </ol>
+			                    </li>
+			                    <li class="accessible-megamenu-panel-group side-col">
+			                        <p class="title no-margins"><a href="#">Have you tried<br /> Space-A travel?</a></p>
+			                        <div class="img-wrapper"></div>
+			                    </li>
+			                </ol>			            
+			            </div>
+			        </li>
+			        
+			        <li class="nav-6">
+			            <h2><a href="#">On &amp; Off Base Living</a></h2>
+			            <div class="cols-2">	
+			            	<div class="nav-pointer"></div>		    
+			                <ol>
+			                    <li class="accessible-megamenu-panel-group">			                        
+			                        <p>NAV-6 On &amp; Off Base Living - Let us help you make the most of your new assignment. From planning each step of your move to confirming that your new commissary does &mdash; in fact &mdash; stock your favorite kind of cereal, we can help. And what would a new place be without a little adventure? Don't forget to weave relaxation and recreation into your plans.</p>
+			                        <ol class="col-2">
+			                            <li><a href="#">Relocation</a></li>
+			                            <li><a href="#">Disaster Preparedness and Recovery</a></li>
+			                            <li><a href="#">Community and Support</a></li>
+			                        </ol>
+			                        <ol class="col-2">
+			                            <li><a href="#">Commissaries and Exchanges</a></li>
+			                            <li><a href="#">Recreation</a></li>
+			                            <li><a href="#">Travel and Vacation</a></li>
+			                        </ol>
+			                    </li>
+			                    <li class="accessible-megamenu-panel-group side-col">
+			                        <p class="title no-margins"><a href="#">Have you tried<br /> Space-A travel?</a></p>
+			                        <div class="img-wrapper"></div>
+			                    </li>
+			                </ol>
+			            </div>
+			        </li>
+			        
+			        <li class="nav-7">
+			            <h2><a href="#">Deployment &amp; Transition</a></h2>
+			            <div class="cols-2">	
+			            	<div class="nav-pointer"></div>		    
+			                <ol>
+			                    <li class="accessible-megamenu-panel-group">			                        
+			                        <p>NAV-7 Deployment &amp; Transition - Let us help you make the most of your new assignment. From planning each step of your move to confirming that your new commissary does &mdash; in fact &mdash; stock your favorite kind of cereal, we can help. And what would a new place be without a little adventure? Don't forget to weave relaxation and recreation into your plans.</p>
+			                        <ol class="col-2">
+			                            <li><a href="#">Relocation</a></li>
+			                            <li><a href="#">Disaster Preparedness and Recovery</a></li>
+			                            <li><a href="#">Community and Support</a></li>
+			                        </ol>
+			                        <ol class="col-2">
+			                            <li><a href="#">Commissaries and Exchanges</a></li>
+			                            <li><a href="#">Recreation</a></li>
+			                            <li><a href="#">Travel and Vacation</a></li>
+			                        </ol>
+			                    </li>
+			                    <li class="accessible-megamenu-panel-group side-col">
+			                        <p class="title no-margins"><a href="#">Have you tried<br /> Space-A travel?</a></p>
+			                        <div class="img-wrapper"></div>
+			                    </li>
+			                </ol>
+			            </div>
+			        </li>    
+			    </ol>
+			</nav>
+		</div>
+	</div>
+	
+	<div class="container container-bg">
+		<div class="cta-highlight clearfix">
+			<p>&nbsp;&nbsp;</p>
+			<p>&nbsp;&nbsp;</p>
+		</div>
+		<!-- END .row .cta-highlight -->
+		
+	</div>
+	<!-- END .container -->
+</div>
+<!-- END .page-body -->
+
+
+<div class="page-band-inverted clearfix">
+	<div class="container container-wide">
+		<div class="row">
+			<p>&nbsp;&nbsp;</p>
+			<p>&nbsp;&nbsp;</p>
+		</div>
+		<!-- END .row -->
+	</div>
+	<!-- END .container -->
+</div>
+<!-- END .page-band-inverted -->
+
+
+<div class="page-band clearfix">
+	<div class="container container-wide">
+		<div class="row">
+			<p>&nbsp;&nbsp;</p>
+			<p>&nbsp;&nbsp;</p>
+		</div>
+		<!-- END .row -->
+	</div>
+	<!-- END .container -->
+</div>
+<!-- END .page-band -->
+
+<div id="FooterLayout-9" class="page-footer clearfix">
+	<div class="container container-wide">
+		<div class="row clearfix">
+			<p>&nbsp;&nbsp;</p>
+			<p>&nbsp;&nbsp;</p>
+			
+		</div>
+		<!-- END .row -->
+		
+	</div>
+	<!-- END .container -->
+</div>
+<!-- END .page-footer -->
+
+</body>
+</html>
